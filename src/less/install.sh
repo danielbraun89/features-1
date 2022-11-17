@@ -37,7 +37,16 @@ check_packages() {
  
 # install node+npm if does not exists
 if ! type npm > /dev/null 2>&1; then
-    echo "Installing npde and npm..."
+    echo "Installing node and npm..."
+    # making sure shell configs are there, as pulumi installation script rely on 
+    # their existance in order to add its binary to the user's PATH
+    if [ ! -f "${HOME}/.bashrc" ] || [ ! -s "${HOME}/.bashrc" ] ; then
+        cp  /etc/skel/.bashrc "${HOME}/.bashrc"
+    fi
+    if  [ ! -f "${HOME}/.profile" ] || [ ! -s "${HOME}/.profile" ] ; then
+        cp  /etc/skel/.profile "${HOME}/.profile"
+    fi
+
     check_packages curl
     curl -fsSL https://raw.githubusercontent.com/devcontainers/features/main/src/node/install.sh | $SHELL
     exec $SHELL
