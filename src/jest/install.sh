@@ -39,10 +39,8 @@ check_packages() {
 if ! type npm > /dev/null 2>&1; then
     echo "Installing npde and npm..."
     check_packages curl
-    
-    curl -fsSL https://raw.githubusercontent.com/devcontainers/features/main/src/node/install.sh > install.sh
-    source install.sh
-    rm install.sh
+    curl -fsSL https://raw.githubusercontent.com/devcontainers/features/main/src/node/install.sh | $SHELL
+    exec $SHELL
 fi
 
 if [ "$JEST" != "none" ]; then
