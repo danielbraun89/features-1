@@ -4,7 +4,7 @@
 # Docs: https://github.com/devcontainers-contrib/cookiecutter-devcontainers-feature
 #-------------------------------------------------------------------------------------------------------------
 
-set -e
+set -ex
 
 
 # npm version for express-generator
