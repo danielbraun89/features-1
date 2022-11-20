@@ -1,8 +1,8 @@
 {
     "name": "yt-dlp",
     "id": "yt-dlp",
-    "version": "1.1.1",
-    "description": "yt-dlp is a youtube-dl fork with additional features and fixes.",
+    "version": "1.1.2",
+    "description": "yt-dlp is a youtube-dl fork with additional features-1 and fixes.",
     "documentationURL": "http://github.com/devcontainers-contrib/features/tree/main/src/yt-dlp",
     "installAfter": [
         "ghcr.io/devcontainers/features/python:latest"
