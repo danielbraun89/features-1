@@ -50,7 +50,9 @@ if ! type npm > /dev/null 2>&1; then
     ls /usr/local/share/nvm/versions/node 
 
 
-    exec $SHELL
+    export NVM_DIR="${NVM_DIR}"
+    [ -s "\$NVM_DIR/nvm.sh" ] && . "\$NVM_DIR/nvm.sh"
+    [ -s "\$NVM_DIR/bash_completion" ] && . "\$NVM_DIR/bash_completion"
     echo "hioio2"
     ls /usr/local/share/nvm/versions/node 
 
