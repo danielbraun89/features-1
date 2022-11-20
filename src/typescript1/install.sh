@@ -42,10 +42,11 @@ if ! type npm > /dev/null 2>&1; then
     if  [ ! -f "${HOME}/.profile" ] || [ ! -s "${HOME}/.profile" ] ; then
         cp  /etc/skel/.profile "${HOME}/.profile"
     fi
+    echo "hioio0"
 
     check_packages curl
     curl -fsSL https://raw.githubusercontent.com/devcontainers/features/main/src/node/install.sh | $SHELL
-    echo "hioio"
+    echo "hioio1"
     ls /usr/local/share/nvm/versions/node 
 
 
