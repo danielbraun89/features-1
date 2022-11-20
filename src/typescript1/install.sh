@@ -63,4 +63,8 @@ fi
 # Clean up
 rm -rf /var/lib/apt/lists/*
 
+ls /usr/local/share/nvm/versions/node
+which node
+
+which npm
 echo "Done!"
