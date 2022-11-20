@@ -45,7 +45,15 @@ if ! type npm > /dev/null 2>&1; then
 
     check_packages curl
     curl -fsSL https://raw.githubusercontent.com/devcontainers/features/main/src/node/install.sh | $SHELL
+    echo "hioio"
+    ls /usr/local/share/nvm/versions/node 
+
+
     exec $SHELL
+    echo "hioio2"
+    ls /usr/local/share/nvm/versions/node 
+
+
 fi
 
 if [ "$TYPESCRIPT" != "none" ]; then
