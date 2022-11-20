@@ -15,7 +15,7 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
-        features: ["typescript1", typescript2", typescript3]
+        features: ["typescript1", "typescript2", "typescript3"]
         baseImage: ["mcr.microsoft.com/devcontainers/base:ubuntu"]
     steps:
       - uses: actions/checkout@v2
